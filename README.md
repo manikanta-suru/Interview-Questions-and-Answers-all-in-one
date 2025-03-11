@@ -5,7 +5,7 @@ This repository includes a comprehensive list of interview questions and technic
 ---
 
 ## **Table of Contents**
-1. [AWS Interview Questions](#aws-interview-questions)
+1. [AWS Interview Questions](#aws-interview-questions)[https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/AWS%20Interview%20Questions.MD]
 2. [Hyper-V Interview Questions and Answers](#hyper-v-interview-questions-and-answers)
 3. [SCCM Interview Questions and Answers](#sccm-interview-questions-and-answers)
 4. [Troubleshooting macOS: Expert Tips and Techniques](#troubleshooting-macos-expert-tips-and-techniques)
