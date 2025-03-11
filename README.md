@@ -6,43 +6,36 @@ Welcome to the **Interview Questions and Answers** repository! Here, you'll find
 
 ## 📄 Files
 
-1. **📝 AWS Interview Questions.MD**  [AWS Interview Questions.MD](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/AWS%20Interview%20Questions.MD)  
+1. **📝 AWS Interview Questions.MD**  
+   [AWS Interview Questions.MD](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/AWS%20Interview%20Questions.MD)  
+   
 2. **💻 Hyper-V Interview Questions and Answers.md**  
    [Hyper-V Interview Questions and Answers.md](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/Hyper-V%20Interview%20Questions%20and%20Answers.md)  
- 
-
+  
 3. **📖 README.md**  
    [README.md](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/README.md)  
   
-
 4. **🛠️ SCCM Interview Questions and Answers**  
    [SCCM Interview Questions and Answers](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/SCCM%20Interview%20Questions%20and%20Answers)  
-   *Last updated: 1 hour ago*
 
 5. **🍎 Troubleshooting macOS: Expert Tips and Techniques.md**  
-   [Troubleshooting macOS: Expert Tips and Techniques.md](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/Troubleshooting%20macOS%20Expert%20Tips%20and%20Techniques.md)  
-   *Last updated: 8 months ago*
-
-6. **📘 VMware vSphere 8.pdf**  
+   [Troubleshooting macOS: Expert Tips and Techniques.md](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/Troubleshooting%20macOS%20Expert%20Tips%20and%20Techniques.md)
+   
+7. **📘 VMware vSphere 8.pdf**  
    [VMware vSphere 8.pdf](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/VMware%20vSphere%208.pdf)  
-   *Added: Last week*
 
-7. **🖥️ Vmware Interview Questions & Answers.Md**  
+8. **🖥️ Vmware Interview Questions & Answers.Md**  
    [Vmware Interview Questions & Answers.Md](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/Vmware%20Interview%20Questions%20%26%20Answers.Md)  
-   *Last updated: 8 months ago*
 
-8. **🖥️ Windows Server L1 and L2 Profile.md**  
+9. **🖥️ Windows Server L1 and L2 Profile.md**  
    [Windows Server L1 and L2 Profile.md](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/Windows%20Server%20L1%20and%20L2%20Profile.md)  
-   *Last updated: 8 months ago*
-
-9. **🔗 Windows clustering.md**  
+   
+10. **🔗 Windows clustering.md**  
    [Windows clustering.md](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/Windows%20clustering.md)  
-   *Added: 9 months ago*
 
-10. **🐧 basic Linux commands.md**  
+11. **🐧 basic Linux commands.md**  
     [basic Linux commands.md](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/basic%20Linux%20commands.md)  
-    *Last updated: 7 months ago*
-
+    
 ---
 
 ## 🚀 How to Use
