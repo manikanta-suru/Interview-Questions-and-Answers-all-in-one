@@ -6,17 +6,14 @@ Welcome to the **Interview Questions and Answers** repository! Here, you'll find
 
 ## 📄 Files
 
-1. **📝 AWS Interview Questions.MD**  
-   [AWS Interview Questions.MD](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/AWS%20Interview%20Questions.MD)  
-   *Last updated: 6 months ago*
-
+1. **📝 AWS Interview Questions.MD**  [AWS Interview Questions.MD](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/AWS%20Interview%20Questions.MD)  
 2. **💻 Hyper-V Interview Questions and Answers.md**  
    [Hyper-V Interview Questions and Answers.md](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/Hyper-V%20Interview%20Questions%20and%20Answers.md)  
-   *Added: 9 months ago*
+ 
 
 3. **📖 README.md**  
    [README.md](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/README.md)  
-   *Last updated: 4 minutes ago*
+  
 
 4. **🛠️ SCCM Interview Questions and Answers**  
    [SCCM Interview Questions and Answers](https://github.com/manikanta-suru/Interview-Questions-and-Answers-all-in-one/blob/main/SCCM%20Interview%20Questions%20and%20Answers)  
