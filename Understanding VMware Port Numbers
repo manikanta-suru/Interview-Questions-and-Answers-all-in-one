@@ -1,28 +1,64 @@
 # 🔒 Understanding VMware Port Numbers 🔒
 
+A concise guide to essential ports used in VMware environments like vSphere, vCenter, ESXi, vMotion, and vSAN.
+
+---
+
 ## 🖥️ vSphere and vCenter Ports
-**443**: Enables HTTPS communication for various VMware services like vCenter, ESXi Host Client, and Web Console.
-- **5480**: Manages VMware virtual appliances via the VMware Appliance Management Interface (VAMI).
-- **902**: Facilitates communication between the vSphere Client and ESXi hosts for VM console traffic.
-- **903**: Handles VMware Remote Console (VMRC) traffic.
-- **9443**: Supports vSphere Web Client for vCenter Server HTTPS traffic.
+
+| Port | Description |
+|------|-------------|
+| **443**  | Enables HTTPS communication for vCenter, ESXi Host Client, and Web Console. |
+| **5480** | VMware Appliance Management Interface (VAMI). |
+| **902**  | vSphere Client to ESXi hosts (VM console). |
+| **903**  | VMware Remote Console (VMRC). |
+| **9443** | vSphere Web Client for vCenter HTTPS access. |
+
+---
 
 ## 🔧 ESXi Ports
-- **22**: Allows SSH access for ESXi security purposes.
-- **80**: Manages HTTP communication, redirects to HTTPS on port 443.
-- **123**: Syncs time using NTP (Network Time Protocol).
-- **2049**: Handles NFS traffic, crucial for NFS datastores.
-- **5988/5989**: Manages CIM (Common Information Model) monitoring traffic.
 
-## 🚀 VMotion Ports
-- **8000**: Essential for facilitating VMotion traffic between ESXi hosts.
+| Port | Description |
+|------|-------------|
+| **22**   | SSH access for ESXi management. |
+| **80**   | HTTP redirection to HTTPS (port 443). |
+| **123**  | NTP (Network Time Protocol) for time sync. |
+| **2049** | NFS traffic for datastores. |
+| **5988/5989** | CIM monitoring for hardware health. |
+
+---
+
+## 🚀 VMotion Port
+
+| Port | Description |
+|------|-------------|
+| **8000** | VMotion traffic between ESXi hosts. |
+
+---
 
 ## 💾 vSAN Ports
-- **2233 (TCP/UDP)**: Manages vSAN cluster traffic efficiently.
-- **2049**: Handles vSAN NFS traffic effectively.
+
+| Port | Description |
+|------|-------------|
+| **2233 (TCP/UDP)** | vSAN cluster communication. |
+| **2049** | vSAN NFS traffic. |
+
+---
 
 ## 🔌 Additional Services
-- **3260**: Supports iSCSI traffic for storage purposes.
-- **389**: Enables LDAP (Lightweight Directory Access Protocol) communication.
-- **636**: Facilitates Secure LDAP (LDAPS) for enhanced security.
-- **53**: Handles DNS traffic crucial for name resolution.
+
+| Port | Description |
+|------|-------------|
+| **3260** | iSCSI storage communication. |
+| **389**  | LDAP for directory services. |
+| **636**  | Secure LDAP (LDAPS). |
+| **53**   | DNS for name resolution. |
+
+---
+
+> ⚙️ *Keep this port guide handy when configuring firewall rules or troubleshooting VMware environments.*
+
+---
+
+📘 Inspired by real-world production configurations  
+🧠 Maintained by [YourName](https://github.com/yourusername)
