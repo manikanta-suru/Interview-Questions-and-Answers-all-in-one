@@ -1,7 +1,7 @@
 # 🔒 Understanding VMware Port Numbers 🔒
 
 ## 🖥️ vSphere and vCenter Ports
-- **443**: Enables HTTPS communication for various VMware services like vCenter, ESXi Host Client, and Web Console.
+**443**: Enables HTTPS communication for various VMware services like vCenter, ESXi Host Client, and Web Console.
 - **5480**: Manages VMware virtual appliances via the VMware Appliance Management Interface (VAMI).
 - **902**: Facilitates communication between the vSphere Client and ESXi hosts for VM console traffic.
 - **903**: Handles VMware Remote Console (VMRC) traffic.
