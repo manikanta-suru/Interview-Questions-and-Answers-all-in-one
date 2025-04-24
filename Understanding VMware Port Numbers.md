@@ -61,4 +61,4 @@ A concise guide to essential ports used in VMware environments like vSphere, vCe
 ---
 
 📘 Inspired by real-world production configurations  
-🧠 Maintained by [YourName](https://github.com/yourusername)
+🧠 Maintained by [manikanta](https://github.com/manikanta-suru)
