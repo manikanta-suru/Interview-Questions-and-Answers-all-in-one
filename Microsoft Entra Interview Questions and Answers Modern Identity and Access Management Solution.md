@@ -254,3 +254,78 @@ Benefits of device identity management with Microsoft Entra ID include:
 - Support for Diverse Scenarios
 
 ---
+
+### 1. Microsoft Entra ID Free
+- **Cost**: Included with Microsoft 365, Azure, and other Microsoft cloud subscriptions.
+- **Key Features**:
+  - User and group management
+  - Single Sign-On (SSO) for Microsoft apps and select SaaS apps
+  - Basic security reports
+  - Self-service password change for cloud users
+  - On-premises directory synchronization
+- **Ideal For**: Organizations seeking fundamental identity and access management capabilities.
+
+---
+
+### 2. Microsoft Entra ID P1
+- **Cost**: $6.00 per user/month (annual commitment)
+- **Key Features**:
+  - All Free tier features
+  - Conditional Access policies
+  - Self-service password reset for on-premises users
+  - Hybrid identity with Microsoft Entra Connect
+  - Group-based access management
+  - Microsoft Entra Connect Health for monitoring
+- **Included In**: Microsoft 365 E3, Microsoft 365 Business Premium, Enterprise Mobility + Security E3.
+
+---
+
+### 3. Microsoft Entra ID P2
+- **Cost**: $9.00 per user/month (annual commitment)
+- **Key Features**:
+  - All P1 features
+  - Identity Protection with risk-based Conditional Access
+  - Privileged Identity Management (PIM)
+  - Access reviews and entitlement management
+  - Advanced auditing and reporting
+- **Included In**: Microsoft 365 E5, Enterprise Mobility + Security E5.
+
+---
+
+### 4. Microsoft Entra ID Governance
+- **Cost**: $7.00 per user/month (annual commitment)
+- **Key Features**:
+  - Advanced identity governance capabilities
+  - Lifecycle workflows
+  - Access reviews
+  - Entitlement management
+- **Prerequisites**: Requires an active subscription to Microsoft Entra ID P1 or P2.
+
+---
+
+### 5. Microsoft Entra Suite
+- **Cost**: $12.00 per user/month (annual commitment)
+- **Components**:
+  - Microsoft Entra ID P1 (required)
+  - Microsoft Entra Private Access
+  - Microsoft Entra Internet Access
+  - Microsoft Entra ID Governance
+  - Microsoft Entra ID Protection
+  - Microsoft Entra Verified ID
+- **Ideal For**: Organizations seeking a comprehensive identity and network access solution.
+
+---
+
+### 6. Microsoft Entra Private Access
+- **Cost**: $5.00 per user/month (annual commitment)
+- **Purpose**: Provides Zero Trust network access (ZTNA) to private applications, enhancing security and user experience.
+
+---
+
+### 7. Microsoft Entra ID Governance Add-ons
+- **Variants**:
+  - Step-Up for Microsoft Entra ID P2
+  - Frontline Worker
+  - Add-on for Microsoft Entra ID P2 for Government
+- **Purpose**: Offers specialized governance capabilities tailored for specific organizational roles and compliance requirements.
+
