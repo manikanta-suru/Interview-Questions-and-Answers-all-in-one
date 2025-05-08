@@ -1,4 +1,4 @@
-1. What is Microsoft Entra?
+# 1. What is Microsoft Entra?
 Top 40 Microsoft Entra Interview Questions and Answers Modern Identity and Access Management Solution
 Microsoft Entra is a cloud-based identity and access management solution. It is a directory and identity management service that operates in the cloud and offers authentication and authorization services to various Microsoft services, such as Microsoft 365, Dynamics 365, Microsoft Azure and third-party services.
 
