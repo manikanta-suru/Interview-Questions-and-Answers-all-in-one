@@ -86,8 +86,6 @@ This summary provides an in-depth exploration of the essential concepts and ques
 - Conditional Access
 - Privileged Identity Management (PIM)
 
-## FAQs
-
 **Q: What features distinguish Microsoft Intra ID from on-premises AD?**  
 A: Microsoft Intra ID is tailored for cloud environments, offering SSO, MFA, and flexible access management, while on-premises AD focuses on local networks and traditional domain management.
 
@@ -103,11 +101,7 @@ A: Engage with Microsoft blogs, attend webinars, follow community forums, and re
 ## Conclusion
 
 The interview preparation summarized above serves as a comprehensive guide for candidates aiming to excel in discussions about **Microsoft Intra ID**. Covering basic concepts, technical features, and real-world scenarios equips aspiring administrators to articulate their knowledge effectively, enhancing their prospects of securing a role in this critical area of cloud identity management.
-```
 
-✅ **You can copy this text and save it as `Microsoft_Intra_ID_Interview_Prep.md`** in your GitHub repository.
-
-Would you like me to include a table of contents or any GitHub badges? 😄
 
 
 # Microsoft Entra Interview Questions and Answers
