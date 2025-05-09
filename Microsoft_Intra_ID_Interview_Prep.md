@@ -52,7 +52,6 @@ This summary provides an in-depth exploration of the essential concepts and ques
    - Describing challenging projects and lessons learned
 
 ## Core Concepts
-
 ### 1. Microsoft Intra ID
 - Formerly Azure Active Directory, it is a comprehensive cloud-based identity service.
 - Provides features like **SSO**, **MFA**, and **Conditional Access**.
