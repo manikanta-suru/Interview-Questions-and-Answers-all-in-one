@@ -24,6 +24,14 @@ Meet Microsoft Entra ID – your modern Identity & Access Management (IAM) solut
 - 🔁 Entra Join + SSO = Smooth user experience across all apps.
 - 🧰 Intune Integration – Full device lifecycle management from one platform.
 
+### 🔐 Microsoft Entra ID – License Overview
+
+| **License**   | **Best For**             | **Key Focus**                                 |
+|---------------|--------------------------|------------------------------------------------|
+| **Free**      | Startups, small orgs     | Basic SSO, Microsoft 365                      |
+| **P1**        | Most orgs                | Hybrid identity + Conditional Access          |
+| **P2**        | Enterprises              | Advanced risk-based access + PIM              |
+| **Governance**| Regulated sectors        | Deep governance + compliance                  |
 
 
 # Microsoft Entra ID: Introduction and Management
