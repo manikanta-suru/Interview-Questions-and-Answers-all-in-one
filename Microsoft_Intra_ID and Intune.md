@@ -122,6 +122,16 @@ Via the Intune admin center dashboard showing device compliance, configuration s
 
 ---
 
+## 📋 Microsoft Intune Licensing Overview
+
+| 🪪 **License**                  | 🧩 **Best For**                 | 🎯 **Key Features / Focus**                                                             |
+|-------------------------------|--------------------------------|------------------------------------------------------------------------------------------|
+| 🆓 **Free / Included**         | Startups, Small Teams          | Basic SSO, Microsoft 365 management, limited mobile device management (MDM)             |
+| 🔐 **Intune Plan 1 (P1)**      | Most Organizations             | Conditional Access, MDM + MAM, Configuration Profiles, Compliance Policies              |
+| 🚨 **Intune Plan 2 (P2)**      | Enterprises                    | Advanced Endpoint Security, Microsoft Defender for Endpoint, Risk-Based Access          |
+| 🏛️ **Intune Suite / Add-ons**  | Regulated/Complex Environments | Remote Help, Endpoint Privilege Management, Advanced Analytics, Microsoft Tunnel for MAM |
+
+
 ## 👏 Final Note
 Star 🌟 this repo if it helped and feel free to contribute by opening a PR!
 
