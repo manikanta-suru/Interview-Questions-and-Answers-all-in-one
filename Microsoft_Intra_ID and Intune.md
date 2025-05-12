@@ -74,7 +74,7 @@ Microsoft **Entra ID** (formerly **Azure Active Directory**) is a cloud-based Id
 **Answer:**  
 Microsoft Intune is a cloud-based endpoint management solution that helps organizations manage and secure devices and apps. It integrates tightly with Entra ID and supports both MDM and MAM.
 
----## 🚀 Key Features of Microsoft Intune
+### 🚀 Key Features of Microsoft Intune
 
 - 📱 Mobile Device Management (MDM) and Mobile Application Management (MAM)
 - 🔐 Integration with Microsoft Entra ID (formerly Azure AD)
