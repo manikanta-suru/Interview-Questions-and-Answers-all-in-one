@@ -68,12 +68,13 @@ Microsoft **Entra ID** (formerly **Azure Active Directory**) is a cloud-based Id
 
 # 💻 Microsoft Intune - Interview Preparation Guide
 
-## 📌 Overview
-This document provides a comprehensive summary of Microsoft Intune features and interview-oriented Q&A, perfect for last-minute revision before interviews.
+## 🎯 Interview Topics & Questions
 
----
+### 1️⃣ What is Microsoft Intune?
+**Answer:**  
+Microsoft Intune is a cloud-based endpoint management solution that helps organizations manage and secure devices and apps. It integrates tightly with Entra ID and supports both MDM and MAM.
 
-## 🚀 Key Features of Microsoft Intune
+---## 🚀 Key Features of Microsoft Intune
 
 - 📱 Mobile Device Management (MDM) and Mobile Application Management (MAM)
 - 🔐 Integration with Microsoft Entra ID (formerly Azure AD)
@@ -86,17 +87,6 @@ This document provides a comprehensive summary of Microsoft Intune features and 
 - 🔧 Windows Autopilot for Out-of-Box Setup
 - 🔍 Monitoring and Reporting Dashboard
 - 🔗 Integration with Microsoft Defender and other Microsoft 365 tools
-
----
-
-## 🎯 Interview Topics & Questions
-
-### 1️⃣ What is Microsoft Intune?
-**Answer:**  
-Microsoft Intune is a cloud-based endpoint management solution that helps organizations manage and secure devices and apps. It integrates tightly with Entra ID and supports both MDM and MAM.
-
----
-
 ### 2️⃣ What platforms does Intune support?
 **Answer:**  
 - Windows 10/11
