@@ -17,6 +17,40 @@
 - **RAID 10 (RAID 1+0):** Combines mirroring and striping. Provides high performance and redundancy by striping data across mirrored pairs.
 - **RAID 01 (RAID 0+1):** Combines striping and mirroring but is less efficient than RAID 10 because it stripes data first, then mirrors it.
 
+## ✅ NAS/SAN Protocols and Implementation
+
+### 🔹 NAS (Network Attached Storage)
+- **File-level storage** over Ethernet
+- Common protocols:
+  - **NFS** (Linux/Unix)
+  - **SMB/CIFS** (Windows)
+- Used for:
+  - **Home directories**
+  - **Shared folders**
+  - **File sharing across LAN**
+
+### 🔹 SAN (Storage Area Network)
+- **Block-level storage**
+- Common protocols:
+  - **iSCSI**
+  - **Fibre Channel (FC)**
+  - **FCoE**
+- Used for:
+  - **VMware datastores**
+  - **Cluster shared volumes**
+  - **Enterprise databases**
+- Appears as **local disk** to the OS
+
+---
+
+## 🛠️ SAN Implementation Steps (Example)
+
+1. Configure **SAN LUNs** on the storage array
+2. Assign them to servers using **WWN** (Fibre Channel) or **iSCSI IQNs**
+3. **Format and mount** the LUNs on **Windows** or **Linux** servers
+4. For clusters, configure as **shared volumes**
+5. Enable **MPIO** (Multipath I/O) for **redundancy** and **performance**
+
 ### **4. What is Diskpart and How to Use This?**
 
 `diskpart` is a command-line utility in Windows used for disk partitioning. Basic usage steps include:
