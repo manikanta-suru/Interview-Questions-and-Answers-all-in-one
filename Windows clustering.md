@@ -73,8 +73,6 @@ This repository contains hands-on implementation notes, troubleshooting techniqu
 
 ---
 
-## 🧠 Summary (For CV / Interviews)
-
 - **Windows Clustering**: Proficient in configuring and managing **WSFC** and **Always On Availability Groups** to ensure **high availability** and **disaster recovery** for critical workloads.
 - **Storage Expertise**: Hands-on experience with **NAS** and **SAN** storage technologies, including protocols like **NFS**, **SMB**, **iSCSI**, and **Fibre Channel** — applied in **virtualized** and **clustered environments**.
 
