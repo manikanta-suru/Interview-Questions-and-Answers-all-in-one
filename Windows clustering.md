@@ -78,12 +78,6 @@ This repository contains hands-on implementation notes, troubleshooting techniqu
 - **Windows Clustering**: Proficient in configuring and managing **WSFC** and **Always On Availability Groups** to ensure **high availability** and **disaster recovery** for critical workloads.
 - **Storage Expertise**: Hands-on experience with **NAS** and **SAN** storage technologies, including protocols like **NFS**, **SMB**, **iSCSI**, and **Fibre Channel** — applied in **virtualized** and **clustered environments**.
 
----
-
-> 💼 **Author**: Manikanta Suru  
-> 🧰 **Skills**: Windows Server | VMware | SAN/NAS | Clustering | SQL Always On | PowerShell | Azure | AWS  
-> 🔗 [LinkedIn](https://www.linkedin.com) | [GitHub](https://github.com)
-
 
 
 **Clustering**: Clustering is a technology used to ensure high availability for critical applications by grouping multiple servers (nodes) together. It provides redundancy so that if one node fails, another can take over its workload seamlessly.
