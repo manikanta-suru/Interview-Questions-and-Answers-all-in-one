@@ -1,3 +1,90 @@
+# ✅ Windows Clustering and NAS/SAN Protocols – Implementation & Troubleshooting
+
+This repository contains hands-on implementation notes, troubleshooting techniques, and real-world usage of **Windows Clustering** technologies and **enterprise storage protocols** (NAS/SAN). It is designed to showcase practical experience in **high availability**, **disaster recovery**, and **infrastructure storage design**.
+
+---
+
+## 🔹 Windows Clustering (Traditional & Always On)
+
+### 🧩 Traditional Windows Clustering (WSFC)
+- Refers to **Windows Server Failover Clustering**
+- Enables **high availability** for services like:
+  - File Servers
+  - Hyper-V
+  - SQL Server
+- Requires **shared storage** (SAN) accessible by all cluster nodes
+- Monitors **node/resource health** and triggers **automatic failover** when needed
+
+### 🧩 Always On Availability Groups (SQL Server)
+- Introduced in **SQL Server 2012+**
+- **No shared storage** needed — uses **replication across nodes**
+- Supports:
+  - **Automatic failover**
+  - **Read-only replicas**
+  - **High database availability**
+
+---
+
+## 🛠️ Clustering Troubleshooting Techniques
+
+- Review cluster logs: `cluster.log`, **Failover Cluster Manager**, **Event Viewer**
+- Check **network connectivity**, **heartbeat failures**
+- Diagnose **storage access issues**
+- Resolve:
+  - **Node evictions**
+  - **Quorum misconfigurations**
+  - **Misaligned DNS records**
+
+---
+
+## ✅ NAS/SAN Protocols and Implementation
+
+### 🔹 NAS (Network Attached Storage)
+- **File-level storage** over Ethernet
+- Common protocols:
+  - **NFS** (Linux/Unix)
+  - **SMB/CIFS** (Windows)
+- Used for:
+  - **Home directories**
+  - **Shared folders**
+  - **File sharing across LAN**
+
+### 🔹 SAN (Storage Area Network)
+- **Block-level storage**
+- Common protocols:
+  - **iSCSI**
+  - **Fibre Channel (FC)**
+  - **FCoE**
+- Used for:
+  - **VMware datastores**
+  - **Cluster shared volumes**
+  - **Enterprise databases**
+- Appears as **local disk** to the OS
+
+---
+
+## 🛠️ SAN Implementation Steps (Example)
+
+1. Configure **SAN LUNs** on the storage array
+2. Assign them to servers using **WWN** (Fibre Channel) or **iSCSI IQNs**
+3. **Format and mount** the LUNs on **Windows** or **Linux** servers
+4. For clusters, configure as **shared volumes**
+5. Enable **MPIO** (Multipath I/O) for **redundancy** and **performance**
+
+---
+
+## 🧠 Summary (For CV / Interviews)
+
+- **Windows Clustering**: Proficient in configuring and managing **WSFC** and **Always On Availability Groups** to ensure **high availability** and **disaster recovery** for critical workloads.
+- **Storage Expertise**: Hands-on experience with **NAS** and **SAN** storage technologies, including protocols like **NFS**, **SMB**, **iSCSI**, and **Fibre Channel** — applied in **virtualized** and **clustered environments**.
+
+---
+
+> 💼 **Author**: Manikanta Suru  
+> 🧰 **Skills**: Windows Server | VMware | SAN/NAS | Clustering | SQL Always On | PowerShell | Azure | AWS  
+> 🔗 [LinkedIn](https://www.linkedin.com) | [GitHub](https://github.com)
+
+
 
 **Clustering**: Clustering is a technology used to ensure high availability for critical applications by grouping multiple servers (nodes) together. It provides redundancy so that if one node fails, another can take over its workload seamlessly.
 
