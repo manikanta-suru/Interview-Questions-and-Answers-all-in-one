@@ -135,7 +135,88 @@ Admins can push apps from:
 **Answer:**  
 Via the Intune admin center dashboard showing device compliance, configuration status, deployment status, and endpoint protection alerts.
 
+## 🔐 How to Force Password Change for All Users in a Specific Group Using Intune and Entra ID
+
+### ❓ **Question**
+How can I apply a policy in Microsoft Intune to ensure that all users in a particular Azure AD group are required to change their password?
+
 ---
+
+### ✅ **Answer**
+
+Microsoft Intune by itself **does not directly force an immediate password change**. However, you can achieve the desired outcome using a combination of **Intune Compliance Policies** and **Microsoft Entra ID (Azure AD)** settings.
+
+---
+
+### 💡 **1. Enforce Password Policies with Intune (Ongoing Enforcement)**
+
+Intune allows you to enforce password **complexity, expiration, and length** policies for users.
+
+#### ✔️ Steps:
+1. Go to **Intune Admin Center** → [https://intune.microsoft.com](https://intune.microsoft.com)
+2. Navigate to **Devices > Compliance policies**
+3. Click **Create Policy** → Choose platform (e.g., Windows 10/11)
+4. Under **System Security**, configure:
+   - Password required
+   - Minimum password length
+   - Password expiration (e.g., 30 days)
+   - Require complexity (uppercase, lowercase, etc.)
+5. **Assign** this policy to the required **Azure AD group**
+
+> 🟡 This **does not force immediate password change**, but ensures users comply with password rules going forward.
+
+---
+
+### 🔀 **2. Force Immediate Password Change (Microsoft Entra ID / PowerShell)**
+
+To **immediately force password reset** for all users in a group, use **Microsoft Entra ID (Azure AD)** or PowerShell.
+
+#### 📌 Manual Method (Entra Admin Center):
+1. Go to **Microsoft Entra Admin Center** → [https://entra.microsoft.com](https://entra.microsoft.com)
+2. Go to **Users > All users**
+3. Filter/select users by group
+4. Click **Reset Password**
+5. Enable **“Require user to change password at next sign-in”**
+
+---
+
+#### 💻 PowerShell Script (Bulk Reset for Group Members):
+```powershell
+# Connect to Azure AD
+Connect-AzureAD
+
+# Get the group ID
+$groupId = (Get-AzureADGroup -SearchString "YourGroupName").ObjectId
+
+# Get all users in that group
+$users = Get-AzureADGroupMember -ObjectId $groupId
+
+# Force password change at next login
+foreach ($user in $users) {
+    Set-AzureADUserPassword -ObjectId $user.ObjectId -ForceChangePasswordNextLogin $true
+}
+```
+
+> 🛠 Requires `AzureAD` PowerShell module
+
+---
+
+### 📌 Summary
+
+| Task                              | Tool                   | Notes                              |
+|-----------------------------------|------------------------|-------------------------------------|
+| Enforce password complexity       | Intune                | Via Compliance Policy               |
+| Force immediate password change   | Entra ID / PowerShell | Requires Azure AD or script         |
+| Target specific users/groups      | Azure AD Groups       | Apply policies to defined groups    |
+
+---
+
+### 📌 Additional Notes:
+- For **Hybrid AD** users, use **on-prem Group Policy** or **Active Directory Users and Computers (ADUC)**.
+- Intune does **not** replace Entra ID for identity functions like password resets.
+
+---
+
 
 ## 📘 Resources
 
