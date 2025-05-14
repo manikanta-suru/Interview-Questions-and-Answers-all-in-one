@@ -238,7 +238,7 @@ foreach ($user in $users) {
 
 Here's a GitHub-flavored Markdown version of your Intune troubleshooting article:
 
-```markdown
+
 # Top 10 Intune Troubleshooting Tips Every Admin Should Know
 
 Microsoft Intune has become a critical tool for managing modern workplaces — but even seasoned admins run into frustrating issues. From device sync failures to app deployment problems, knowing how to troubleshoot Intune efficiently can save hours of work and boost user satisfaction.
@@ -316,19 +316,6 @@ Resources:
 - [Reddit r/Intune](https://www.reddit.com/r/Intune/)
 - Twitter/X hashtags like `#Intune`
 
-For official support: Escalate to Microsoft Support with collected logs.
-```
 
-### Key GitHub Markdown Features Used:
-1. Headers with `#`, `##`
-2. Code blocks with triple backticks (```)
-3. Inline code with single backticks (`)
-4. Ordered list (1-10)
-5. Nested bullet points
-6. Links in `[text](url)` format
-7. Blockquote with `>`
-8. Bold with `**text**`
-
-Would you like me to make any adjustments to the formatting or content?
 
 
