@@ -1,3 +1,120 @@
+# Top Networking Interview Questions and Answers
+
+## OSI Model and Protocols
+
+### 1. What is the OSI Model? Describe its layers
+**Answer:**  
+The OSI (Open Systems Interconnection) model standardizes telecommunication functions into seven layers:
+
+| Layer | Name | Function |
+|-------|------|----------|
+| 7 | Application | Provides network services to end-user applications |
+| 6 | Presentation | Data translation, encryption, compression |
+| 5 | Session | Manages connections between applications |
+| 4 | Transport | Ensures complete data transfer (TCP/UDP) |
+| 3 | Network | Handles routing and IP addressing |
+| 2 | Data Link | Error detection/correction, MAC addressing |
+| 1 | Physical | Transmits raw bit streams over physical media |
+
+**References:**  
+[Network Rhynos](https://example.com) | [Wikipedia](https://en.wikipedia.org/wiki/OSI_model)
+
+### 2. Difference between TCP and UDP
+**Answer:**  
+
+| Feature | TCP | UDP |
+|---------|-----|-----|
+| Connection | Connection-oriented | Connectionless |
+| Reliability | Guaranteed delivery | No delivery guarantee |
+| Speed | Slower | Faster |
+| Use Cases | Web browsing, email | Streaming, VoIP |
+
+## IP Addressing
+
+### 3. What is an IP address and its classes?
+**Answer:**  
+An IP address is a unique device identifier. IPv4 classes:
+
+| Class | Range | Purpose |
+|-------|-------|---------|
+| A | 1.0.0.0 - 126.255.255.255 | Large networks |
+| B | 128.0.0.0 - 191.255.255.255 | Medium networks |
+| C | 192.0.0.0 - 223.255.255.255 | Small networks |
+| D | 224.0.0.0 - 239.255.255.255 | Multicasting |
+| E | 240.0.0.0 - 255.255.255.255 | Experimental |
+
+**References:**  
+[Network Rhynos](https://example.com) | [Wikipedia](https://en.wikipedia.org/wiki/IPv4) | [TechTarget](https://example.com)
+
+### 4. Purpose of subnetting
+**Answer:**  
+- Improves routing efficiency
+- Enhances network security
+- Optimizes IP address usage
+- Reduces broadcast traffic
+
+## Network Services
+
+### 5. What is DNS and how it works
+**Answer:**  
+DNS (Domain Name System) translates domain names → IP addresses:
+1. User enters "www.example.com"
+2. DNS resolver queries DNS servers
+3. Returns corresponding IP (e.g., 192.0.2.1)
+4. Browser connects to the IP
+
+### 6. What is DHCP and its function
+**Answer:**  
+DHCP (Dynamic Host Configuration Protocol):
+- Automatically assigns:
+  - IP addresses
+  - Subnet masks
+  - Default gateways
+  - DNS servers
+- Uses DORA process (Discover, Offer, Request, Acknowledge)
+
+## Network Components
+
+### 7. What is a MAC address?
+**Answer:**  
+- 48-bit hardware identifier (e.g., 00:1A:2B:3C:4D:5E)
+- Assigned to NICs
+- Operates at Data Link Layer (Layer 2)
+- Used for local network delivery
+
+### 8. What is NAT and its purpose?
+**Answer:**  
+Network Address Translation:
+- Allows multiple devices to share one public IP
+- Types:
+  - Static NAT (1:1 mapping)
+  - Dynamic NAT (pool of IPs)
+  - PAT (Port Address Translation)
+- Benefits:
+  - IP conservation
+  - Security through obscurity
+
+### 9. What is a VLAN and its importance?
+**Answer:**  
+Virtual LAN:
+- Logically segments physical networks
+- Benefits:
+  - Improved security (isolate traffic)
+  - Reduced broadcast domains
+  - Simplified network management
+- Types: Port-based, MAC-based, Protocol-based
+
+### 10. Switch vs Router
+**Answer:**  
+
+| Feature | Switch | Router |
+|---------|--------|--------|
+| OSI Layer | Layer 2 (Data Link) | Layer 3 (Network) |
+| Addressing | Uses MAC addresses | Uses IP addresses |
+| Function | Connects devices in same network | Connects different networks |
+| Traffic Handling | Forwards frames | Routes packets |
+| Protocols | STP, VLAN | RIP, OSPF, BGP |
+
 # Top 120 Networking Interview Questions and Answers for 2025
 
 At Network Rhinos, we understand the importance of mastering networking concepts in today's competitive IT landscape. This guide covers 120 essential networking questions from basic to advanced levels.
