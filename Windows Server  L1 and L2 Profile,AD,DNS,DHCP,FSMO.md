@@ -10,6 +10,7 @@
 - **Extended Partition:** Can contain an unlimited number of logical partitions. Useful for creating more than four partitions on a disk.
 
 ### **3. Difference between RAID 0, RAID 1, RAID 5, RAID 10, RAID 01?**
+RAID stands for Redundant Array of Independent Disks. It's a data storage technology that combines multiple physical drives into a single logical unit to enhance performance, provide redundancy, or both
 
 - **RAID 0 (Striping):** Data is split across multiple disks, offering improved performance but no redundancy.
 - **RAID 1 (Mirroring):** Data is copied identically on two or more disks, providing redundancy and improved read performance.
