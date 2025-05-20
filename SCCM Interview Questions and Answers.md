@@ -192,6 +192,84 @@ This repository contains a comprehensive list of **SCCM (System Center Configura
   - Downloading only required updates.
   - Installing non-security updates after defining security updates in WSUS.
 
+As of May 2025, the latest SCCM (System Center Configuration Manager) client agent version is 5.00.9158.1000, which corresponds to Configuration Manager Current Branch version 2503.
+
+📌 SCCM 2503 Client Agent Version Details
+Client Version: 5.00.9158.1000
+
+Release Date: March 31, 2025
+
+Support End Date: September 30, 2026
+
+Update Type: In-console update for sites running version 2309 or later
+Prajwal Desai
+Reddit
++8
+Reddit
++8
+Microsoft Learn
++8
+
+This update focuses on security and quality improvements, addressing over 230 reported bugs. 
+Prajwal Desai
++1
+Reddit
++1
+
+🔄 How to Verify and Upgrade the SCCM Client Version
+Check Current Client Version:
+
+On a client machine, open the Control Panel.
+
+Navigate to Configuration Manager > General tab.
+
+The client version is displayed here.
+
+Enable Automatic Client Upgrade:
+
+Open the SCCM Console.
+
+Go to Administration > Site Configuration > Sites.
+
+Select your site and click on Hierarchy Settings in the ribbon.
+
+Under the Client Upgrade tab, check the box for Upgrade all clients in the hierarchy using production client.
+
+Specify the number of days for the upgrade to occur.
+System Center Dudes
++1
+Prajwal.org
++1
+Lansweeper
+
+Manual Client Upgrade:
+
+Download the latest client installation package from the SCCM site server.
+
+Run the installer on the target client machines.
+
+🛠️ Troubleshooting Tips
+Client Not Updating:
+
+Ensure the client machine has network connectivity to the SCCM server.
+
+Check for any firewall rules blocking communication.
+
+Review the ccmsetup.log file on the client for installation errors.
+
+Version Mismatch:
+
+Use the following WQL query to identify clients not on the latest version:
+Prajwal.org
+
+sql
+Copy
+Edit
+SELECT SMS_R_System.Name, SMS_R_System.ClientVersion
+FROM SMS_R_System
+WHERE SMS_R_System.ClientVersion != '5.00.9158.1000'
+
+
 ---
 
 ## Conclusion
