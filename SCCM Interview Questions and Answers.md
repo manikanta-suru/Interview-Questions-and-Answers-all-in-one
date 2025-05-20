@@ -181,93 +181,123 @@ This repository contains a comprehensive list of **SCCM (System Center Configura
   - Hardware inventory
   - Software inventory.
 
+---Always show details
+
+Copy
+from pathlib import Path
+
+# Content from the created SCCM FAQ markdown
+sccm_faq_content = """
+# SCCM (System Center Configuration Manager) - FAQ and Interview Preparation
+
+## 1. What is SCCM?
+**Answer**: System Center Configuration Manager (SCCM) is a Microsoft solution for managing large groups of computers. It provides remote control, patch management, software distribution, operating system deployment, network access protection, and hardware/software inventory.
+
 ---
 
-## SCCM Patch Management Questions
+## 2. Where are SCCM logs stored?
+**Client Logs**: `C:\\Windows\\CCM\\Logs`
 
-### 80. What is IMTU patch management?
-- **Answer:** IMTU patch management involves:
-  - Scanning using Windows Update Agent (WUA).
-  - Using WSUS as a scan inventory (SUP).
-  - Downloading only required updates.
-  - Installing non-security updates after defining security updates in WSUS.
+**Server Logs**: 
+- Main: `D:\\Program Files\\Microsoft Configuration Manager\\Logs`
+- Roles (e.g., MP, DP): `C:\\SMS_CCM\\Logs`
 
-As of May 2025, the latest SCCM (System Center Configuration Manager) client agent version is 5.00.9158.1000, which corresponds to Configuration Manager Current Branch version 2503.
+**Common Logs**:
+- `ClientIDManagerStartup.log`: Client registration
+- `LocationServices.log`: Site assignment
+- `mpcontrol.log`: MP status
+- `distmgr.log`: Distribution point activity
 
-📌 SCCM 2503 Client Agent Version Details
-Client Version: 5.00.9158.1000
+---
 
-Release Date: March 31, 2025
+## 3. What is the latest SCCM version?
+**Answer**: As of May 2025, the latest version is **SCCM 2503**, released in March 2025.
 
-Support End Date: September 30, 2026
+- Supports Windows Server 2025
+- Enhanced TLS 1.3 security
+- Improved endpoint compliance
+- Upgrade recommended for latest features and support
 
-Update Type: In-console update for sites running version 2309 or later
-Prajwal Desai
-Reddit
-+8
-Reddit
-+8
-Microsoft Learn
-+8
+---
 
-This update focuses on security and quality improvements, addressing over 230 reported bugs. 
-Prajwal Desai
-+1
-Reddit
-+1
+## 4. What is the latest SCCM Client Agent version?
+**Answer**: The latest SCCM client agent version is **5.00.9158.1000**, which corresponds to SCCM version 2503.
 
-🔄 How to Verify and Upgrade the SCCM Client Version
-Check Current Client Version:
+**Check Version**:
+- Go to Control Panel > Configuration Manager > General tab
 
-On a client machine, open the Control Panel.
+**Upgrade Client**:
+- Admin Console > Administration > Site Configuration > Sites > Hierarchy Settings > Client Upgrade
+- Or manually using ccmsetup.exe
 
-Navigate to Configuration Manager > General tab.
-
-The client version is displayed here.
-
-Enable Automatic Client Upgrade:
-
-Open the SCCM Console.
-
-Go to Administration > Site Configuration > Sites.
-
-Select your site and click on Hierarchy Settings in the ribbon.
-
-Under the Client Upgrade tab, check the box for Upgrade all clients in the hierarchy using production client.
-
-Specify the number of days for the upgrade to occur.
-System Center Dudes
-+1
-Prajwal.org
-+1
-Lansweeper
-
-Manual Client Upgrade:
-
-Download the latest client installation package from the SCCM site server.
-
-Run the installer on the target client machines.
-
-🛠️ Troubleshooting Tips
-Client Not Updating:
-
-Ensure the client machine has network connectivity to the SCCM server.
-
-Check for any firewall rules blocking communication.
-
-Review the ccmsetup.log file on the client for installation errors.
-
-Version Mismatch:
-
-Use the following WQL query to identify clients not on the latest version:
-Prajwal.org
-
-sql
-Copy
-Edit
-SELECT SMS_R_System.Name, SMS_R_System.ClientVersion
-FROM SMS_R_System
+**Query to Find Outdated Clients**:
+```sql
+SELECT SMS_R_System.Name, SMS_R_System.ClientVersion 
+FROM SMS_R_System 
 WHERE SMS_R_System.ClientVersion != '5.00.9158.1000'
+5. How to troubleshoot SCCM client issues?
+Answer:
+
+Use CMTrace to read logs in real-time.
+
+Common logs: ccmsetup.log, ClientIDManagerStartup.log, PolicyAgent.log
+
+Ensure communication ports are open and system has correct site assignment.
+
+6. What tools help with SCCM troubleshooting?
+Answer:
+
+CMTrace.exe (log viewer)
+
+Configuration Manager Toolkit
+
+Client Center for Configuration Manager
+
+Event Viewer
+
+7. SCCM Client Logs to Monitor
+Common Logs:
+
+UpdatesDeployment.log: Updates deployment status
+
+WUAHandler.log: Windows Update Agent log
+
+AppDiscovery.log: Application detection
+
+CAS.log: Content download
+
+8. How to use the Client Push Installation Method?
+Steps:
+
+Enable in Site Settings
+
+Configure client push account
+
+Ensure client firewall settings allow WMI/SMB
+
+Review ccm.log on site server for deployment status
+
+9. How to upgrade SCCM to the latest version?
+Steps:
+
+Backup site server
+
+Run prerequisite check in Console
+
+Perform in-console upgrade
+
+Monitor logs: CMUpdate.log, ConfigMgrSetup.log
+
+10. How to monitor SCCM software deployment?
+Logs to check:
+
+execmgr.log: Application execution
+
+AppEnforce.log: Application installation details
+
+DataTransferService.log: Download progress
+
+
 
 
 ---
