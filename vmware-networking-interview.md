@@ -1,6 +1,4 @@
-Here's a well-structured GitHub Markdown (`.md`) file format for your VMware networking interview preparation, with clear section alignment and technical highlighting:
 
-```markdown
 # VMware Networking Essentials - L3 Interview Preparation
 
 ## 🔹 Virtual Switch Types
