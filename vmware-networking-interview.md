@@ -16,6 +16,8 @@
 - **Configuration**: Applies to multiple hosts simultaneously
 - **Advantage**: Essential for scalability and policy consistency
 - **Key Feature**: Supports advanced networking features not available in vSS
+  <img width="410" alt="image" src="https://github.com/user-attachments/assets/b02c014e-3239-481c-a0b7-314865951511" />
+
 
 ---
 
