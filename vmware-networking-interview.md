@@ -126,9 +126,6 @@ graph TD
 5. **Code Blocks**: For technical commands/checklists
 6. **Emphasis**: Critical notes stand out with bold/red
 
-### Suggested Filename:
-`vmware-networking-interview.md`
-
 This format ensures:
 - Technical accuracy is preserved
 - Easy scanning during interview prep
