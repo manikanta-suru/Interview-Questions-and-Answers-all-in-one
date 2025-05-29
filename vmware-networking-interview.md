@@ -4,14 +4,14 @@
 ## 🔹 Virtual Switch Types
 
 ### Standard Switch (vSS)
-    Local per ESXi host; must be configured on each host individually.
+- Local per ESXi host; must be configured on each host individually.
 - **Scope**: Local per ESXi host
 - **Configuration**: Manual setup required on each host
 - **Use Case**: Small environments, standalone hosts
 <img width="437" alt="image" src="https://github.com/user-attachments/assets/afe6681a-368d-4e59-ba12-e296b0a324df" />
 
 ### Distributed Switch (vDS)
-    Managed centrally via vCenter; configures networking for multiple hosts at once—essential for scalability and consistency.
+- Managed centrally via vCenter; configures networking for multiple hosts at once—essential for scalability and consistency.
 - **Scope**: Centralized management via vCenter
 - **Configuration**: Applies to multiple hosts simultaneously
 - **Advantage**: Essential for scalability and policy consistency
