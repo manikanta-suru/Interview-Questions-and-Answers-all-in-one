@@ -7,6 +7,8 @@
 - **Scope**: Local per ESXi host
 - **Configuration**: Manual setup required on each host
 - **Use Case**: Small environments, standalone hosts
+<img width="437" alt="image" src="https://github.com/user-attachments/assets/2da86058-d25d-426f-8ddd-3b541f55416b" />
+
 
 ### Distributed Switch (vDS)
 - **Scope**: Centralized management via vCenter
