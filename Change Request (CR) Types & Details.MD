@@ -9,6 +9,14 @@
 | **Emergency**     | Urgent fixes, fast-tracked with minimal approval | Critical outage fix, zero-day patch       |
 
 ---
+## 🧩 Priority Levels (P1 to P4)
+
+| Priority | Description                             | Impact Examples                                     | Response SLA          |
+|----------|-----------------------------------------|----------------------------------------------------|------------------------|
+| **P1**   | Critical / Major outage                 | Full site down, multiple systems offline           | Immediate, 24x7 support |
+| **P2**   | High / Major functionality impacted     | Partial outage, one critical system affected       | Respond within 1 hour  |
+| **P3**   | Medium / Minor issue or degradation     | One user or non-critical service impacted          | Respond within 4 hours |
+| **P4**   | Low / Cosmetic or documentation related | UI glitch, documentation update, general query     | Respond within 1–2 days|
 
 ## 📝 Required Details in a Change Request
 
