@@ -190,8 +190,107 @@ Get-Service -ComputerName Server01 | Where-Object {$_.Status -eq "Stopped"}
 # Export process list to CSV
 Get-Process | Export-Csv C:\Reports\Processes.csv -NoTypeInformation
 ```
+Sure 👍 — here are your sentences **corrected** with proper grammar and clarity, along with quick **PowerShell examples** for each so you can add them to your notes or GitHub doc.
 
 ---
+
+### ✅ **Corrected Sentences + Examples**
+
+---
+
+### 1️⃣ **How to create an AD user in PowerShell**
+
+✅ **Correct sentence:**
+
+> How to create an Active Directory (AD) user in PowerShell?
+
+**Example:**
+
+```powershell
+# Import AD module
+Import-Module ActiveDirectory
+
+# Create a new AD user
+New-ADUser -Name "John Doe" `
+           -SamAccountName jdoe `
+           -UserPrincipalName jdoe@domain.com `
+           -Path "OU=Users,DC=domain,DC=com" `
+           -AccountPassword (Read-Host -AsSecureString "Enter Password") `
+           -Enabled $true
+```
+
+---
+
+### 2️⃣ **How to check the latest PowerShell path installed**
+
+✅ **Correct sentence:**
+
+> How to check the latest PowerShell installation path?
+
+**Example:**
+
+```powershell
+# Show path of the current PowerShell executable
+$PSHOME
+
+# Or get version and path info
+$PSVersionTable.PSVersion
+$PSHOME
+```
+
+**Output Example:**
+
+```
+Major  Minor  Build  Revision
+-----  -----  -----  --------
+7      5      1      0
+C:\Program Files\PowerShell\7
+```
+
+---
+
+### 3️⃣ **How to check disk space in PowerShell**
+
+✅ **Correct sentence:**
+
+> How to check disk space using PowerShell?
+
+**Example:**
+
+```powershell
+# Get disk usage and free space
+Get-PSDrive -PSProvider FileSystem
+
+# Or detailed info
+Get-WmiObject Win32_LogicalDisk | Select-Object DeviceID, VolumeName, @{Name='FreeGB';Expression={"{0:N2}" -f ($_.FreeSpace/1GB)}}, @{Name='TotalGB';Expression={"{0:N2}" -f ($_.Size/1GB)}}
+```
+
+---
+
+### 4️⃣ **How to check event logs in PowerShell**
+
+✅ **Correct sentence:**
+
+> How to check event logs using PowerShell?
+
+**Example:**
+
+```powershell
+# List available event logs
+Get-EventLog -List
+
+# Show the latest 10 System log entries
+Get-EventLog -LogName System -Newest 10
+
+# Check for specific errors
+Get-EventLog -LogName Application -EntryType Error -Newest 20
+```
+
+---
+
+Would you like me to format these four sections into a **GitHub-ready Markdown block** (like your earlier Wintel README style)?
+I can align and style it for your documentation.
+
 
 ## 🧾 Author
 
