@@ -197,16 +197,4 @@ Get-Process | Export-Csv C:\Reports\Processes.csv -NoTypeInformation
 
 **Manikanta Suru**  
 *Wintel Administrator | PowerShell Enthusiast*
-```
 
----
-
-## 📁 How to Use on GitHub:
-
-1. **Copy the entire content above**
-2. **Create a new file** in your GitHub repository (click "Add file" → "Create new file")
-3. **Name it** `README.md` (or any name like `PowerShell-Commands.md`)
-4. **Paste the content**
-5. **Commit changes**
-
-The Markdown will render beautifully with proper code formatting, tables, and section headers! 🚀
