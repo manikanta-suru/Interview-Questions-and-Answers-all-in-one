@@ -1,10 +1,4 @@
-Got it 👍 — you want a **clean, single Markdown file** that you can **directly upload or paste into GitHub** (for example, as `README.md`), perfectly formatted for your **Wintel Admin PowerShell Commands** reference.
 
-Here’s the **final version**, fully aligned, with clean headers, spacing, and code blocks (GitHub-ready ✅):
-
----
-
-````markdown
 # 🧰 PowerShell Basic Commands for Wintel Administrators
 
 A handy **PowerShell command reference** for Windows Server (Wintel) administrators.  
@@ -33,7 +27,7 @@ Get-Service
 # Restart or shutdown the system
 Restart-Computer
 Stop-Computer
-````
+```
 
 ---
 
@@ -203,25 +197,18 @@ Get-Process | Export-Csv C:\Reports\Processes.csv -NoTypeInformation
 
 ## 🧾 Author
 
-**Your Name**
+**Manikanta Suru**  
 *Wintel Administrator | PowerShell Enthusiast*
-
-> 💡 **Tip:** Use **Visual Studio Code** with the **PowerShell Extension** for syntax highlighting, IntelliSense, and easy script debugging.
-
----
-
 ```
 
 ---
 
-### ✅ Instructions to Use on GitHub:
-1. Create a new repository (or open an existing one).  
-2. Add a new file named **`README.md`** (or any `.md` file).  
-3. Copy-paste the above Markdown code into it.  
-4. Commit and push — GitHub will render it beautifully with formatting, colors, and code blocks.
+## 📁 How to Use on GitHub:
 
----
+1. **Copy the entire content above**
+2. **Create a new file** in your GitHub repository (click "Add file" → "Create new file")
+3. **Name it** `README.md` (or any name like `PowerShell-Commands.md`)
+4. **Paste the content**
+5. **Commit changes**
 
-Would you like me to include a short **“Troubleshooting Commands”** section too (for checking services, event logs, and network latency)? It fits nicely at the bottom of your README.
-```
-
+The Markdown will render beautifully with proper code formatting, tables, and section headers! 🚀
