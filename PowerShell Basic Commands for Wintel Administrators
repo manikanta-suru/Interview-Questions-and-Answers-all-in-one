@@ -1,0 +1,217 @@
+Perfect 👍 — here’s a **ready-to-use Markdown (`.md`) file** containing **basic PowerShell commands for Wintel Administrators**.
+
+You can copy this directly into your **GitHub README.md** or any `.md` document — it’s clean, formatted, and GitHub-friendly ✅
+
+---
+
+````markdown
+# 🧰 PowerShell Basic Commands for Wintel Administrators
+
+A quick reference guide for common **PowerShell commands** used in **Windows Server (Wintel)** administration.
+
+---
+
+## 🖥️ System Information
+
+```powershell
+# Get detailed system information
+Get-ComputerInfo
+
+# Basic computer system info
+Get-WmiObject Win32_ComputerSystem
+
+# Check OS version
+(Get-WmiObject Win32_OperatingSystem).Caption
+
+# Get list of running processes
+Get-Process
+
+# Get list of running services
+Get-Service
+
+# Restart or shutdown system
+Restart-Computer
+Stop-Computer
+````
+
+---
+
+## 🌐 Network Commands
+
+```powershell
+# Get IP configuration
+Get-NetIPAddress
+
+# Show network adapters
+Get-NetAdapter
+
+# Test network connectivity (Ping equivalent)
+Test-Connection google.com
+
+# Test specific port connectivity
+Test-NetConnection -ComputerName google.com -Port 443
+
+# Display routing table
+Get-NetRoute
+```
+
+---
+
+## 🔐 Active Directory (AD) Commands
+
+> 🧩 Requires RSAT / ActiveDirectory module installed.
+
+```powershell
+# Import Active Directory module
+Import-Module ActiveDirectory
+
+# Get user info
+Get-ADUser -Identity jdoe
+
+# Search for users with filter
+Get-ADUser -Filter * | Select Name, SamAccountName
+
+# Get group members
+Get-ADGroupMember -Identity "Domain Admins"
+
+# Reset user password
+Set-ADAccountPassword -Identity jdoe
+
+# Unlock AD account
+Unlock-ADAccount -Identity jdoe
+```
+
+---
+
+## 💾 File System Management
+
+```powershell
+# List files in a directory
+Get-ChildItem C:\Logs
+
+# Copy a file or folder
+Copy-Item C:\file.txt D:\Backup\
+
+# Move a file
+Move-Item C:\file.txt D:\Archive\
+
+# Delete files/folders
+Remove-Item C:\Temp\* -Recurse -Force
+
+# Get file or folder properties
+Get-ItemProperty C:\file.txt
+```
+
+---
+
+## 🧑‍💻 User & Process Management
+
+```powershell
+# List local users
+Get-LocalUser
+
+# Create a new local user
+New-LocalUser -Name "testuser" -Password (Read-Host -AsSecureString)
+
+# List running processes (sorted by CPU usage)
+Get-Process | Sort-Object CPU -Descending
+
+# Kill a process by name
+Stop-Process -Name notepad -Force
+```
+
+---
+
+## 💽 Disk & Storage Management
+
+```powershell
+# List all volumes
+Get-Volume
+
+# Show physical disk details
+Get-Disk
+
+# List all partitions
+Get-Partition
+
+# Show logical drives
+Get-PSDrive
+```
+
+---
+
+## 🧩 RDP and Port Checks
+
+```powershell
+# Test RDP (port 3389)
+Test-NetConnection -ComputerName Server01 -Port 3389
+
+# Check if port is listening locally
+netstat -an | find "3389"
+```
+
+---
+
+## 🧠 Useful PowerShell Switches & Parameters
+
+| Switch     | Description                            |
+| ---------- | -------------------------------------- |
+| `-Force`   | Override restrictions or confirmations |
+| `-Recurse` | Include all child items/subfolders     |
+| `-Confirm` | Prompt before executing                |
+| `-WhatIf`  | Show what would happen (no execution)  |
+| `-Verbose` | Display detailed command output        |
+
+**Example:**
+
+```powershell
+Remove-Item C:\Temp\* -Recurse -WhatIf
+```
+
+---
+
+## 📘 Help & Documentation
+
+```powershell
+# Get help for a cmdlet
+Get-Help Get-Service
+
+# Show examples
+Get-Help Get-Service -Examples
+
+# Display full syntax and parameters
+Get-Help Get-Service -Full
+```
+
+---
+
+## ⚡ Common Server Admin Tasks
+
+```powershell
+# Restart a remote computer
+Restart-Computer -ComputerName Server01 -Force
+
+# Get service status on a remote server
+Get-Service -ComputerName Server01 | Where-Object {$_.Status -eq "Stopped"}
+
+# Export process list to CSV
+Get-Process | Export-Csv C:\Reports\Processes.csv -NoTypeInformation
+```
+
+---
+
+### 🧾 Author
+
+**Your Name**
+*Wintel Administrator | PowerShell Enthusiast*
+
+> 💡 Tip: Use **VS Code** with the **PowerShell Extension** for syntax highlighting, auto-completion, and debugging.
+
+---
+
+```
+
+---
+
+Would you like me to include an extra section at the bottom for **“PowerShell Commands for Troubleshooting (Network, Disk, Performance)”** — useful for server issue diagnosis?
+```
