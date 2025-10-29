@@ -284,12 +284,161 @@ Get-EventLog -LogName System -Newest 10
 
 # Check for specific errors
 Get-EventLog -LogName Application -EntryType Error -Newest 20
+
+Here are several ways to create **5 AD users at the same time** in PowerShell:
+
+## Method 1: Using a Loop with Array of User Data
+
+```powershell
+# Import AD module
+Import-Module ActiveDirectory
+
+# Define users array
+$Users = @(
+    @{FirstName="John"; LastName="Doe"; Username="jdoe"; Department="IT"},
+    @{FirstName="Jane"; LastName="Smith"; Username="jsmith"; Department="HR"},
+    @{FirstName="Mike"; LastName="Johnson"; Username="mjohnson"; Department="Finance"},
+    @{FirstName="Sarah"; LastName="Williams"; Username="swilliams"; Department="Marketing"},
+    @{FirstName="David"; LastName="Brown"; Username="dbrown"; Department="Operations"}
+)
+
+# Create users
+foreach ($User in $Users) {
+    $DisplayName = $User.FirstName + " " + $User.LastName
+    $UPN = $User.Username + "@yourdomain.com"
+    
+    New-ADUser `
+        -Name $DisplayName `
+        -GivenName $User.FirstName `
+        -Surname $User.LastName `
+        -SamAccountName $User.Username `
+        -UserPrincipalName $UPN `
+        -DisplayName $DisplayName `
+        -Department $User.Department `
+        -AccountPassword (ConvertTo-SecureString "TempPassword123!" -AsPlainText -Force) `
+        -Enabled $true
+    
+    Write-Host "Created user: $($User.Username)" -ForegroundColor Green
+}
 ```
 
----
+## Method 2: Using CSV File (Recommended for Bulk Operations)
 
-Would you like me to format these four sections into a **GitHub-ready Markdown block** (like your earlier Wintel README style)?
-I can align and style it for your documentation.
+**Step 1: Create CSV file (`users.csv`):**
+```csv
+FirstName,LastName,Username,Department,Password
+John,Doe,jdoe,IT,TempPassword123!
+Jane,Smith,jsmith,HR,TempPassword123!
+Mike,Johnson,mjohnson,Finance,TempPassword123!
+Sarah,Williams,swilliams,Marketing,TempPassword123!
+David,Brown,dbrown,Operations,TempPassword123!
+```
+
+**Step 2: PowerShell script to import CSV and create users:**
+```powershell
+# Import AD module
+Import-Module ActiveDirectory
+
+# Import users from CSV
+$Users = Import-Csv -Path "C:\users.csv"
+
+# Create users
+foreach ($User in $Users) {
+    $DisplayName = $User.FirstName + " " + $User.LastName
+    $UPN = $User.Username + "@yourdomain.com"
+    
+    New-ADUser `
+        -Name $DisplayName `
+        -GivenName $User.FirstName `
+        -Surname $User.LastName `
+        -SamAccountName $User.Username `
+        -UserPrincipalName $UPN `
+        -DisplayName $DisplayName `
+        -Department $User.Department `
+        -AccountPassword (ConvertTo-SecureString $User.Password -AsPlainText -Force) `
+        -Enabled $true `
+        -ChangePasswordAtLogon $true
+    
+    Write-Host "Successfully created user: $($User.Username)" -ForegroundColor Green
+}
+
+Write-Host "All 5 users created successfully!" -ForegroundColor Cyan
+```
+
+## Method 3: Simple Sequential Creation
+
+```powershell
+# Import AD module
+Import-Module ActiveDirectory
+
+# Create users one by one
+New-ADUser -Name "John Doe" -GivenName "John" -Surname "Doe" -SamAccountName "jdoe" -UserPrincipalName "jdoe@yourdomain.com" -AccountPassword (ConvertTo-SecureString "TempPassword123!" -AsPlainText -Force) -Enabled $true
+
+New-ADUser -Name "Jane Smith" -GivenName "Jane" -Surname "Smith" -SamAccountName "jsmith" -UserPrincipalName "jsmith@yourdomain.com" -AccountPassword (ConvertTo-SecureString "TempPassword123!" -AsPlainText -Force) -Enabled $true
+
+New-ADUser -Name "Mike Johnson" -GivenName "Mike" -Surname "Johnson" -SamAccountName "mjohnson" -UserPrincipalName "mjohnson@yourdomain.com" -AccountPassword (ConvertTo-SecureString "TempPassword123!" -AsPlainText -Force) -Enabled $true
+
+New-ADUser -Name "Sarah Williams" -GivenName "Sarah" -Surname "Williams" -SamAccountName "swilliams" -UserPrincipalName "swilliams@yourdomain.com" -AccountPassword (ConvertTo-SecureString "TempPassword123!" -AsPlainText -Force) -Enabled $true
+
+New-ADUser -Name "David Brown" -GivenName "David" -Surname "Brown" -SamAccountName "dbrown" -UserPrincipalName "dbrown@yourdomain.com" -AccountPassword (ConvertTo-SecureString "TempPassword123!" -AsPlainText -Force) -Enabled $true
+
+Write-Host "All 5 users created successfully!" -ForegroundColor Green
+```
+
+## Method 4: Using For Loop with Numbered Users
+
+```powershell
+# Import AD module
+Import-Module ActiveDirectory
+
+# Create 5 test users with sequential numbers
+for ($i = 1; $i -le 5; $i++) {
+    $Username = "testuser$i"
+    $DisplayName = "Test User $i"
+    $UPN = "$Username@yourdomain.com"
+    
+    New-ADUser `
+        -Name $DisplayName `
+        -GivenName "Test" `
+        -Surname "User$i" `
+        -SamAccountName $Username `
+        -UserPrincipalName $UPN `
+        -DisplayName $DisplayName `
+        -Department "IT" `
+        -AccountPassword (ConvertTo-SecureString "TempPassword123!" -AsPlainText -Force) `
+        -Enabled $true `
+        -ChangePasswordAtLogon $true
+    
+    Write-Host "Created user: $Username" -ForegroundColor Yellow
+}
+
+Write-Host "All test users created successfully!" -ForegroundColor Cyan
+```
+
+## 🔧 Important Parameters Explained:
+
+- **`-Name`**: Full display name
+- **`-SamAccountName`**: Pre-Windows 2000 username (jdoe)
+- **`-UserPrincipalName`**: Modern login name (jdoe@domain.com)
+- **`-AccountPassword`**: Secure password (must meet complexity requirements)
+- **`-Enabled $true`**: Activates the account immediately
+- **`-ChangePasswordAtLogon $true`**: Forces password change on first login
+
+## ✅ Verification Command:
+
+```powershell
+# Verify the created users
+Get-ADUser -Filter "Name -like '*Test*'" | Select Name, SamAccountName, Enabled
+```
+
+## ⚠️ Important Notes:
+
+1. **Run PowerShell as Administrator**
+2. **Ensure AD module is available** (on Domain Controller or RSAT installed)
+3. **Passwords must meet complexity requirements**
+4. **Modify domain name** (`yourdomain.com`) to match your environment
+5. **Test in lab environment first**
+
 
 
 ## 🧾 Author
