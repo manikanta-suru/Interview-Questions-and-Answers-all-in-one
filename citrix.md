@@ -12,6 +12,9 @@ When deploying Citrix Virtual Apps or Desktops, a fundamental decision is where 
 You host and manage all Citrix components in your own data center.
 <img width="602" height="223" alt="image" src="https://github.com/user-attachments/assets/d54e5936-d77d-45b3-86fb-c083b2ef098f" />
 
+<img width="697" height="323" alt="image" src="https://github.com/user-attachments/assets/35ffc520-1dff-4664-9090-e6d824f01c50" />
+
+
 **Key Components You Manage:**
 *   Delivery Controller
 *   StoreFront
