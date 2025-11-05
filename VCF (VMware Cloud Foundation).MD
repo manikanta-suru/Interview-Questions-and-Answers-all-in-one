@@ -2,6 +2,8 @@
 
 VMware Cloud Foundation (VCF) is a comprehensive **software-defined data center (SDDC) platform** from VMware that integrates compute, storage, networking, security, and cloud management into a single, unified stack. It is delivered as a validated, automated solution to enable private, hybrid, and on-premises cloud environments.
 
+
+
 The primary goal of VCF is to provide enterprise customers with a **cloud-like operational model**—featuring automation, scalability, and self-service—while using their own on-premises or hybrid infrastructure.
 
 ---
