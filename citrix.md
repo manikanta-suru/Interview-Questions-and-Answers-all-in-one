@@ -10,6 +10,7 @@ When deploying Citrix Virtual Apps or Desktops, a fundamental decision is where 
 
 ### 1. On-Premises (Traditional)
 You host and manage all Citrix components in your own data center.
+<img width="602" height="223" alt="image" src="https://github.com/user-attachments/assets/d54e5936-d77d-45b3-86fb-c083b2ef098f" />
 
 **Key Components You Manage:**
 *   Delivery Controller
